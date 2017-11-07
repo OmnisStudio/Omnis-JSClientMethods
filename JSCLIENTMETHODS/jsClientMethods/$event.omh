@@ -1,0 +1,9 @@
+On evLayoutChanged
+	Calculate iBreakpoint as pBreakpoint
+	If iBreakpoint=600
+		If iLastTip='email'
+			Do $cinst.$objs.Tip.$top.$assign(195)
+		Else If iLastTip='password'
+			Do $cinst.$objs.Tip.$top.$assign(255)
+		End If
+	End If

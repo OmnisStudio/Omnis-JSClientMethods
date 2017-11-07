@@ -1,0 +1,22 @@
+;  Enter your initialization code here
+
+If $cwind().$name<>$cclass().$name     ;; form is in a subwindow
+	Do $cwind.$getConstructRow Returns pRow
+End If
+If pRow.Flags     ;; browser supports animation
+Else
+	Do $cinst.$objs.Tip.$top.$assign(-50)
+End If
+
+Do iTitles.$define(iTitle)
+Do iTitles.$add('Please select...')
+Do iTitles.$add('Mr')
+Do iTitles.$add('Mrs')
+Do iTitles.$add('Miss')
+Do iTitles.$line.$assign(1)
+
+Do iList.$define(iDisplay)
+Do method addContact ('Mr Sam Green','sam.green@omnis.net','01728 604080')
+Do method addContact ('Miss Wendy Brown','wendy.brown@omnis.net','01728 604080')
+
+Do $cinst.$objs.Tip.$alpha.$assign(0)

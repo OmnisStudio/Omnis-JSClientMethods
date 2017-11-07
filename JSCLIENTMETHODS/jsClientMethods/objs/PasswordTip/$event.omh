@@ -1,0 +1,19 @@
+On evClick
+	If iLastTip='password'
+		Do $cinst.$beginanimations(500,kJSAnimationCurveLinear)
+		Do $cinst.$objs.Tip.$alpha.$assign(0)
+		Do $cinst.$commitanimations()
+		Calculate iLastTip as ''
+	Else
+		Do $cinst.$objs.TipText.$textcolor.$assign(kBlack)
+		Calculate iTip as "A password must be at least 6 characters long."
+		
+		Do $cinst.$beginanimations(500,kJSAnimationCurveLinear)
+		If iBreakpoint<>310
+			Do $cinst.$objs.Tip.$top.$assign(255)
+		End If
+		Do $cinst.$objs.Tip.$alpha.$assign(260)
+		Do $cinst.$commitanimations()
+		
+		Calculate iLastTip as 'password'
+	End If

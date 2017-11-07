@@ -1,0 +1,60 @@
+{
+	"ident": 1024,
+	"order": 20,
+	"objtype": "kComponent",
+	"componentlib": "jsLabel",
+	"componentctrl": "Label Object",
+	"properties": {
+		"alpha": 255,
+		"backalpha": 255,
+		"backcolor": "kWhite",
+		"contextmenu": "",
+		"cssclassname": "",
+		"dataname": "",
+		"desgroup": 0,
+		"designactive": true,
+		"deslock": false,
+		"disabledefaultcontextmenu": false,
+		"disablesystemfocus": false,
+		"dropmode": "kAcceptNone",
+		"enabled": true,
+		"events": "",
+		"fieldstyle": "",
+		"font": 1,
+		"fontsize": 10,
+		"fontstyle": "kPlain",
+		"objlink": 0,
+		"preventlayoutanimation": false,
+		"text": "There were errors found with your details, please correct these and try again!",
+		"textcolor": "kRed",
+		"textishtml": false,
+		"tooltip": "",
+		"userinfo": "",
+		"vertcentertext": false,
+		"visible": false
+	},
+	"layout": {
+		"310": {
+			"left": 315,
+			"top": 5,
+			"width": 200,
+			"height": 53,
+			"align": "kLeftJst",
+			"dragborder": false,
+			"edgefloat": "kEFright",
+			"errortextpos": "kJSErrorTextPosUnder",
+			"visible": false
+		},
+		"600": {
+			"left": 10,
+			"top": 315,
+			"width": 450,
+			"height": 37,
+			"align": "kLeftJst",
+			"dragborder": false,
+			"edgefloat": "kEFnone",
+			"errortextpos": "kJSErrorTextPosUnder",
+			"visible": true
+		}
+	}
+}

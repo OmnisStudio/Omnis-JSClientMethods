@@ -1,0 +1,51 @@
+On evClick
+	If len(iPassword)<6
+		Do $cinst.$objs.PasswordLabel.$textcolor.$assign(kRed)
+		Calculate lCurField as 'Password'
+	Else
+		Do $cinst.$objs.PasswordLabel.$textcolor.$assign(kBlack)
+	End If
+	
+	If iTelephone=''
+		Do $cinst.$objs.TelephoneLabel.$textcolor.$assign(kRed)
+		Calculate lCurField as 'Telephone'
+	Else
+		Do $cinst.$objs.TelephoneLabel.$textcolor.$assign(kBlack)
+	End If
+	
+	If pos('@',iEmail)=0
+		Do $cinst.$objs.EmailLabel.$textcolor.$assign(kRed)
+		Calculate lCurField as 'Email'
+	Else
+		Do $cinst.$objs.EmailLabel.$textcolor.$assign(kBlack)
+	End If
+	
+	If iLastName=''
+		Do $cinst.$objs.LastNameLabel.$textcolor.$assign(kRed)
+		Calculate lCurField as 'LastName'
+	Else
+		Do $cinst.$objs.LastNameLabel.$textcolor.$assign(kBlack)
+	End If
+	
+	If iFirstName=''
+		Do $cinst.$objs.FirstNameLabel.$textcolor.$assign(kRed)
+		Calculate lCurField as 'FirstName'
+	Else
+		Do $cinst.$objs.FirstNameLabel.$textcolor.$assign(kBlack)
+	End If
+	
+	If iTitles.$line=1
+		Do $cinst.$objs.TitleLabel.$textcolor.$assign(kRed)
+		Calculate lCurField as 'TitleList'
+	Else
+		Do $cinst.$objs.TitleLabel.$textcolor.$assign(kBlack)
+	End If
+	
+	If len(lCurField)
+		Do $cinst.$objs.Error.$visible.$assign(kTrue)
+		Do $cinst.$setcurfield(lCurField)
+	Else
+		Do $cinst.$objs.Error.$visible.$assign(kFalse)
+		Calculate lName as con(iTitles.iTitle,' ',iFirstName,' ',iLastName)
+		Do method addContact (lName,iEmail,iTelephone)
+	End If

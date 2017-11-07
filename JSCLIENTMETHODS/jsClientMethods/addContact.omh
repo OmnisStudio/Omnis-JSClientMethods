@@ -1,0 +1,5 @@
+Begin text block
+Text: {[iJsHtmlOpenP][iJsHtmlFloatLeft][pName][iJsHtmlCloseSpan][iJsHtmlFloatRight][pTelephone][style(kEscBmp,1710+k32x32)][iJsHtmlCloseSpan][br()][iJsHtmlSmallFont][style(kEscStyle,kItalic)][style(kEscColor,kBlue)][pEmail][iJsHtmlCloseSpan][iJSCloseP]}
+End text block
+Get text block iDisplay
+Do iList.$add(iDisplay)

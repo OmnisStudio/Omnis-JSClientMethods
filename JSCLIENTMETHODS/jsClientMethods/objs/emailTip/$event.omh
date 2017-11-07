@@ -1,0 +1,17 @@
+On evClick
+	If iLastTip='email'     ;; remove tip
+		Do $cinst.$beginanimations(500,kJSAnimationCurveLinear)
+		Do $cinst.$objs.Tip.$alpha.$assign(0)
+		Do $cinst.$commitanimations()
+		Calculate iLastTip as ''
+	Else     ;; show tip
+		Calculate iTip as "Enter a valid email address containing a '@' symbol."
+		Do $cinst.$beginanimations(500,kJSAnimationCurveLinear)
+		If iBreakpoint<>310
+			Do $cinst.$objs.Tip.$top.$assign(195)
+		End If
+		Do $cinst.$objs.Tip.$alpha.$assign(255)
+		Do $cinst.$commitanimations()
+		
+		Calculate iLastTip as 'email'
+	End If
